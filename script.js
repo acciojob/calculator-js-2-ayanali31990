@@ -7,11 +7,12 @@ buttons.forEach((btn) => {
 
     if (id === "C") {
       display.innerText = "";
-    } else if (id === "back") {
+    } 
+    else if (id === "back") {
       display.innerText = display.innerText.slice(0, -1);
-    } else if (id === "equal") {
+    } 
+    else if (id === "equal") {
       try {
-        // Prevent division by zero or invalid eval
         if (display.innerText.trim() === "") {
           display.innerText = "";
           return;
@@ -27,70 +28,29 @@ buttons.forEach((btn) => {
       } catch {
         display.innerText = "Error";
       }
-    } else if (id === "divi") {
+    } 
+    else if (id === "divi") {
       display.innerText += "/";
-    } else if (id === "plus") {
+    } 
+    else if (id === "plus") {
       display.innerText += "+";
-    } else if (id === "-") {
+    } 
+    else if (id === "-") {
       display.innerText += "-";
-    } else if (id === "*") {
+    } 
+    else if (id === "*") {
       display.innerText += "*";
-    } else if (id === "op") {
+    } 
+    else if (id === "op") {
       display.innerText += "(";
-    } else if (id === "cl") {
+    } 
+    else if (id === "cl") {
       display.innerText += ")";
-    } else if (id === "dot") {
+    } 
+    else if (id === "dot") {
       display.innerText += ".";
-    } else {
-      display.innerText += id;
-    }
-  });
-});
-//your JS code here. If required.
-const display = document.getElementById("display");
-const buttons = document.querySelectorAll("button");
-
-buttons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const id = btn.id;
-
-    if (id === "C") {
-      display.innerText = "";
-    } else if (id === "back") {
-      display.innerText = display.innerText.slice(0, -1);
-    } else if (id === "equal") {
-      try {
-        // Prevent division by zero or invalid eval
-        if (display.innerText.trim() === "") {
-          display.innerText = "";
-          return;
-        }
-
-        const result = eval(display.innerText);
-
-        if (result === Infinity || isNaN(result)) {
-          display.innerText = "Error";
-        } else {
-          display.innerText = result;
-        }
-      } catch {
-        display.innerText = "Error";
-      }
-    } else if (id === "divi") {
-      display.innerText += "/";
-    } else if (id === "plus") {
-      display.innerText += "+";
-    } else if (id === "-") {
-      display.innerText += "-";
-    } else if (id === "*") {
-      display.innerText += "*";
-    } else if (id === "op") {
-      display.innerText += "(";
-    } else if (id === "cl") {
-      display.innerText += ")";
-    } else if (id === "dot") {
-      display.innerText += ".";
-    } else {
+    } 
+    else {
       display.innerText += id;
     }
   });
